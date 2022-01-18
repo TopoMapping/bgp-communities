@@ -1,0 +1,37 @@
+digraph snakemake_dag {
+    graph[bgcolor=white, margin=0];
+    node[shape=box, style=rounded, fontname=sans,                 fontsize=10, penwidth=2];
+    edge[penwidth=2, color=grey];
+	0[label = "location", color = "0.43 0.6 0.85", style="rounded"];
+	1[label = "merge_csv", color = "0.51 0.6 0.85", style="rounded"];
+	2[label = "statistics", color = "0.24 0.6 0.85", style="rounded"];
+	3[label = "allcommunities", color = "0.47 0.6 0.85", style="rounded"];
+	4[label = "origins_and_comms", color = "0.35 0.6 0.85", style="rounded"];
+	5[label = "sort_data", color = "0.39 0.6 0.85", style="rounded"];
+	6[label = "geocommunities", color = "0.08 0.6 0.85", style="rounded"];
+	7[label = "siblings_remove", color = "0.27 0.6 0.85", style="rounded"];
+	8[label = "bgpscanner", color = "0.00 0.6 0.85", style="rounded"];
+	9[label = "geocommpickle", color = "0.04 0.6 0.85", style="rounded"];
+	10[label = "removal_pickle", color = "0.59 0.6 0.85", style="rounded"];
+	11[label = "hitting_set", color = "0.20 0.6 0.85", style="rounded"];
+	1 -> 0
+	2 -> 0
+	2 -> 1
+	6 -> 2
+	7 -> 2
+	4 -> 2
+	5 -> 2
+	3 -> 2
+	8 -> 3
+	8 -> 4
+	3 -> 4
+	6 -> 5
+	7 -> 5
+	9 -> 6
+	6 -> 7
+	10 -> 7
+	8 -> 9
+	11 -> 10
+	8 -> 11
+	3 -> 11
+}            
